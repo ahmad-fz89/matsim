@@ -12,23 +12,28 @@
     <groupId>org.matsim.contrib</groupId>
     <artifactId>osm</artifactId>
 
-    <repositories>
-        <repository>
-            <id>topobyte</id>
-            <url>http://mvn.topobyte.de</url>
-        </repository>
-        <repository>
-            <id>slimjars</id>
-            <url>http://mvn.slimjars.com</url>
-        </repository>
-
-    </repositories>
-
     <dependencies>
         <dependency>
-            <groupId>de.topobyte</groupId>
-            <artifactId>osm4j-pbf</artifactId>
-            <version>0.1.1</version>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.11.1</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.os72</groupId>
+                <artifactId>protoc-jar-maven-plugin</artifactId>
+                <version>3.11.1</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

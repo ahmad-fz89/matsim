@@ -1,13 +1,10 @@
 package org.matsim.contrib.osm.networkReader;
 
 import com.slimjars.dist.gnu.trove.list.array.TLongArrayList;
-import de.topobyte.osm4j.core.model.iface.OsmNode;
 import de.topobyte.osm4j.core.model.iface.OsmTag;
-import de.topobyte.osm4j.core.model.iface.OsmWay;
 import de.topobyte.osm4j.core.model.impl.Node;
 import de.topobyte.osm4j.core.model.impl.Tag;
 import de.topobyte.osm4j.core.model.impl.Way;
-import de.topobyte.osm4j.pbf.seq.PbfWriter;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.matsim.api.core.v01.network.Link;
